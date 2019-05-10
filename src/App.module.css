@@ -1,0 +1,39 @@
+html {
+
+        font-family: 'Roboto', sans-serif;
+    height: 100%;
+
+}
+ body{
+    font-family: 'Roboto', sans-serif;
+
+
+ }
+
+
+.header{
+
+        flex-direction: column;
+
+      }
+.wrapper{
+    display: flex;
+    background: #9092B2;
+    background-size: 200%;
+    height: 100%;
+    width: 100%;
+      }
+.content{
+
+}
+
+
+
+
+
+
+
+
+
+
+

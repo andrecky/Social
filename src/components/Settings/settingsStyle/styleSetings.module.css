@@ -1,0 +1,11 @@
+.buttomBack{
+    display: flex;
+    /* width: 50px; */
+    height: 800px;
+    border-radius: 20px;
+    margin: 70px 150px;
+    
+}
+.text{
+    display: flex;
+}

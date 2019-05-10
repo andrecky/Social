@@ -1,0 +1,15 @@
+.blockNews{
+    flex-direction: column;
+  margin: 70px 150px;
+  }
+      
+  .oneBlock{
+      display: flex;
+  border: 1px solid red;
+  border-radius: 10px;
+  width:600px;
+  height:30px;
+  margin-left: 200px;
+  margin-top: 20px;
+  padding-left: 300px;
+  }

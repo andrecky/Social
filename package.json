@@ -1,11 +1,24 @@
 {
-  "name": "my-social",
+  "name": "bro-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.18.0",
+    "components": "^0.1.0",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-dom": "^16.7.0",
+    "react-icons": "^3.6.1",
+    "react-infinite-scroll-component": "^4.5.2",
+    "react-redux": "^6.0.0",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.2",
+    "react-transition-group": "^4.0.0",
+    "react-with-hooks": "^1.1.6",
+    "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-form": "^8.1.0",
+    "redux-thunk": "^2.3.0",
+    "styled": "^1.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -16,16 +29,13 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "styled-components": "^4.1.3"
   }
 }
