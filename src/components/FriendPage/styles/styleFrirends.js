@@ -45,7 +45,7 @@ export const BlockName = styled.div`
      display: flex;
     flex-direction: column;
     width: 100%;
-     
+     font-size: 10px;
 `;
 
 export const LineVertical = styled.div`
@@ -60,6 +60,8 @@ export const NameSpan = styled.span`
      margin-top: -15px;
      font-size: 18px;
      color: black;
+     font-size: 12px;
+     // align-items: center;
 `;
 export const StatusSpan = styled.span`
      margin-top: 30px;
@@ -82,18 +84,19 @@ export const ButtonBlock = styled.div`
 flex-direction: column;
 display: flex;
 width: 100%;
-margin: 10px 10px 10px 10px ;
+// margin: 5px 10px 10px 10px ;
 
 `;
 
 export const OnlineFriendsHead = styled.div``;
 
  export const Button =styled.span`
+ text-align: center;
 padding: 5px;
   cursor: pointer;
   width: 80px;
   height: 10px;
-   margin: 5px;
+   margin: 10px;
     outline: none;
     font-size: 9px;
     color: #B3CB03;

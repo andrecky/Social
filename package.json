@@ -6,6 +6,10 @@
     "axios": "^0.18.0",
     "components": "^0.1.0",
     "react": "^16.8.6",
+    "react-calculator": "0.0.2",
+    "react-calendar": "^2.18.1",
+    "react-carousel": "^4.3.0",
+    "react-compare-image": "^0.8.1",
     "react-dom": "^16.7.0",
     "react-icons": "^3.6.1",
     "react-infinite-scroll-component": "^4.5.2",
@@ -18,6 +22,7 @@
     "redux-devtools-extension": "^2.13.8",
     "redux-form": "^8.1.0",
     "redux-thunk": "^2.3.0",
+    "slick-carousel": "^1.8.1",
     "styled": "^1.0.0"
   },
   "scripts": {
@@ -36,6 +41,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "react-slick": "^0.24.0",
     "styled-components": "^4.1.3"
   }
 }

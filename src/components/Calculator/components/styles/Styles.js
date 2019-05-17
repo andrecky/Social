@@ -4,7 +4,7 @@ export const    CalculatorStyles = styled.div`
 margin-top: 55px;
   background-color: #b6b6b6;
   width: 100%;
-  min-height: 80vh;
+  min-height: 60vh;
   display: grid;
   justify-items: center;
   grid-template-rows: minmax(200px 350px) 1fr;

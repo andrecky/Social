@@ -77,9 +77,25 @@ export const Contacts = styled.div`
   margin: 5px;
 `;
 export const Organizer = styled.div`
-    
-    height: 50px;
+    height: auto;
     width: 300px;
+    outline: none;
+    text-align:center; 
+    color: #B3CB03;
+    // border: 2px solid #B3CB03;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    // box-shadow: 1px 1px 1px 1px #000000;
+    // background-color: #D9DBF2;
+    // border-radius: 5px;
+    position: fixed;
+    right: 20px;
+    
+`;
+export const SideBarOrganizer = styled.div`
+ padding-bottom: 5px;
+  height: auto;
+    width: auto;
     outline: none;
     text-align:center; 
     color: #B3CB03;
@@ -89,10 +105,25 @@ export const Organizer = styled.div`
     box-shadow: 1px 1px 1px 1px #000000;
     background-color: #D9DBF2;
     border-radius: 5px;
-    position: fixed;
-    right: 15px;
+    margin: 0px 3px 3px 0px;
     
+ `;
+export const OrganizerContent = styled.div`
+height: auto;
+    width: auto;
+    outline: none;
+    text-align:center; 
+    color: #B3CB03;
+    border: 2px solid #B3CB03;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-shadow: 1px 1px 1px 1px #000000;
+    background-color: #D9DBF2;
+    border-radius: 5px;
+  margin: 10px 3px 3px 0px;
 `;
+
+
 export const ButtonOrganizer = styled.button`
    cursor: pointer;
    margin: 10px 5px 5px 5px  ;
@@ -165,3 +196,4 @@ export const ButtonPost = styled.button`
     background: #023885;
     }
 `;
+

@@ -8,7 +8,6 @@ import {
 
 
 const mapStateToProps = (state) => {
-    debugger
     return {
         users: state.UsersPage.items,
         page:state.UsersPage.page,

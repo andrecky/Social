@@ -1,18 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ComentsBlock from '../Coments/ComentsBlock';
 import style from './styles/ProfileBlock.module.css';
 import avatar_min from '../../../images/nice_fallout.jpeg';
-
 import Likes from '../Likes/likes';
-
 import ContactForm from '../../redux-Forms/ContactsForm'
-
 import {
     Avatar,
     AvatarBlock, ButtonOrganizer, ButtonPost, ComentsBlocks,
     Contacts, ContentBlockDown, ImgAvatar,
     InfoBlock,
-    InpuStatus, ItemLeftBlock, ItemRightBlock, Organizer, PostBlock, Span,
+    InpuStatus, ItemLeftBlock, ItemRightBlock, Organizer, OrganizerContent, PostBlock, SideBarOrganizer, Span,
     TitleName,
     UserBlock,
     Wrapper
@@ -21,15 +18,24 @@ import {Line} from "../../Login/LoginStyle/LoginStyled";
 import {FaCalculator, FaCalendarAlt, FaClipboardList, FaCloudSun, FaMap, FaSearchDollar} from "react-icons/fa";
 import {NavLink} from "react-router-dom";
 import {useEffect} from "react-with-hooks";
+import SimpleSlider from "../Slider/Slider";
+import {Calendar} from "react-calendar";
+
 
 const ProfileBlock = (props) => {
+
+    let [toggle, setToggle] = useState(false);
+    let toggleOn = (bool = !toggle) => setToggle(bool);
+    let [date, setState] = useState(new Date());
+    let onChange = (date) => setState(date);
+
+
     useEffect(() => {
         return props.getProfileThunk(props.match.params.id)
     }, []);
     useEffect(() => {
         return props.getProfileStatus(props.match.params.id)
     }, []);
-
     let submit = (values) => {
         props.OnChangeStatus(values);
         props.toggleStatusSwitch();
@@ -82,36 +88,43 @@ const ProfileBlock = (props) => {
                         </Contacts>
                     </InfoBlock>
                     <Organizer>
-                        <NavLink to='/social/Calculator'>
+                        <SideBarOrganizer>
                             <ButtonOrganizer>
-                                <FaCalculator/>
+                                <FaCalendarAlt data='calcul' onClick={() => toggleOn()}/>
                             </ButtonOrganizer>
-                        </NavLink>
-                        <NavLink to='/social/Calculator'>
-                            <ButtonOrganizer>
-                                <FaClipboardList/>
-                            </ButtonOrganizer>
-                        </NavLink>
-                        <NavLink to='/social/Calculator'>
-                            <ButtonOrganizer>
-                                <FaCalendarAlt/>
-                            </ButtonOrganizer>
-                        </NavLink>
-                        <NavLink to='/social/Calculator'>
-                            <ButtonOrganizer>
-                                <FaSearchDollar/>
-                            </ButtonOrganizer>
-                        </NavLink>
-                        <NavLink to='/social/Calculator'>
-                            <ButtonOrganizer>
-                                <FaCloudSun/>
-                            </ButtonOrganizer>
-                        </NavLink>
-                        <NavLink to='/social/calculator'>
-                            <ButtonOrganizer>
-                                <FaMap/>
-                            </ButtonOrganizer>
-                        </NavLink>
+                            <NavLink to='/social/Calculator'>
+                                <ButtonOrganizer>
+                                    <FaClipboardList/>
+                                </ButtonOrganizer>
+                            </NavLink>
+                            <NavLink to='/social/Calculator'>
+                                <ButtonOrganizer>
+                                    <FaCalculator/>
+                                </ButtonOrganizer>
+                            </NavLink>
+                            <NavLink to='/social/Calculator'>
+                                <ButtonOrganizer>
+                                    <FaSearchDollar/>
+                                </ButtonOrganizer>
+                            </NavLink>
+                            <NavLink to='/social/Calculator'>
+                                <ButtonOrganizer>
+                                    <FaCloudSun/>
+                                </ButtonOrganizer>
+                            </NavLink>
+                            <NavLink to='/social/calculator'>
+                                <ButtonOrganizer>
+                                    <FaMap/>
+                                </ButtonOrganizer>
+                            </NavLink>
+                        </SideBarOrganizer>
+
+                        {toggle ? <OrganizerContent>
+                            <Calendar
+                                onChange={onChange}
+                                value={date}
+                            />
+                        </OrganizerContent> : null}
                     </Organizer>
                 </UserBlock>
 
@@ -124,7 +137,10 @@ const ProfileBlock = (props) => {
                             <ComentsBlocks>
                                 <PostBlock>
                                     <div className={style.blokComents}>
-                                        <img className={style.ava} src={avatar_min}/>
+
+                                        <img
+                                            className={style.ava}
+                                            src={avatar_min}/>
 
                                         <input
                                             className={style.comentsSend}
@@ -157,6 +173,6 @@ const ProfileBlock = (props) => {
             </Wrapper>
         );
 
-}
+};
 
 export default ProfileBlock;

@@ -25,7 +25,7 @@ const Users = (props) => {
             return props.getUsers()
         }, []);
 
-    return <WrapperFriends >
+    return <WrapperFriends>
         <InfiniteScroll
             className={style.scrollBlock}
             dataLength={props.users.length}
@@ -43,13 +43,19 @@ const Users = (props) => {
                                 <FotoAllUsers
                                     src={us.photos.small === null ? UrlImg : us.photos.small}/>
                             </NavLink>
-                            <UserBlock><BlockName>
-                                <NavLink className='link'
-                                         to={`/social/users/profile/${us.id}`}
-                                         activeClassName="">
-                                    <NameSpan>{us.name}</NameSpan>
-                                </NavLink>
-                                <StatusSpan>{us.status === null ? 'no status' : us.status}</StatusSpan></BlockName>
+                            <UserBlock>
+                                <BlockName>
+                                    <NavLink className='link'
+                                             to={`/social/users/profile/${us.id}`}
+                                             activeClassName="">
+                                        <NameSpan>
+                                            {us.name}
+                                        </NameSpan>
+                                    </NavLink>
+                                    <StatusSpan>
+                                        {us.status === null ? 'no status' : us.status}
+                                    </StatusSpan>
+                                </BlockName>
                                 <ButtonBlock>
                                     <Button onClick={() => !us.followed ? props.follow(us.id, index)
                                         : props.unFollow(us.id, index)}>
